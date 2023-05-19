@@ -30,3 +30,64 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=shankarb0709&show_icons=true&locale=en" alt="shankarb0709" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=shankarb0709&" alt="shankarb0709" /></p>
+
+19-05-23(js)
+const left = document.querySelector('.left');
+const right = document.querySelector('.right');
+const skillsContainer = document.querySelector('.skills container');
+
+left.addEventListener('mouseenter',()=> {skills-container.classlist.add('hover-left')});
+right.addEventListener('mouseenter',()=> {skills-container.classlist.add('hover-right')});
+(css)
+:root{
+    --hover-width:70%;
+    --min-width:30%
+}
+body{
+    min-height: 200px;
+}
+.skills-container{
+    background-color: bisque;
+    position: relative;
+    left: 30%;
+    right: 30%;
+    width: 50%;
+    height: 100%;
+}
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100;
+}
+
+.split.left{
+    background-color: red;
+}
+.split.right{
+    background-color: rgb(187, 127, 255);
+    right: 5%;
+}
+.split.left:hover{
+    color: #d4d0d0;
+}
+.split.right:hover{
+    color: royalblue;
+}
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before{
+    transition: all 3sec;
+}
+.hover-left .right{
+    width: var(--min-width);
+}
+.hover-left .left{
+    width: var(--hover-width);
+}
+.hover-right .right{
+    width: var(--hover-width);
+}
+.hover-right .left{
+    width: var(--min-width);
+}
